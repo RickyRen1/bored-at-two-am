@@ -1,15 +1,6 @@
-
-
-
-from math import floor
-
-def calcSpace(i, numStars):
-    return floor((numStars - i)/2)
-
 def printStarsHelper(i, numStars):
-        print(' ' * calcSpace(i, numStars), end='')
-        print('*' * i, end='')
-        print(' ' * calcSpace(i, numStars))
+    numSpace = (numStars - i)//2
+    print(f"{' ' * numSpace}{'*' * i}{' ' * numSpace}")
 
 def printStars(numStars):
     for i in range(1, numStars, 2):
@@ -19,4 +10,3 @@ def printStars(numStars):
 
 if __name__ == "__main__":
     printStars(13)
-
